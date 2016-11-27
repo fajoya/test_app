@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2016-11-26
+  time: 2016-11-26 23:12:29
+  dock_id: 1
+
+two:
+  date: 2016-11-26
+  time: 2016-11-26 23:12:29
+  dock_id: 1

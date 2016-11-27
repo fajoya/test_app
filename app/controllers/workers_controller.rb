@@ -54,11 +54,11 @@ class WorkersController < ApplicationController
   # DELETE /workers/1
   # DELETE /workers/1.json
   def destroy
-    @worker.destroy
-    respond_to do |format|
-      format.html { redirect_to workers_url, notice: 'Worker was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+      @worker.destroy
+      respond_to do |format|
+        format.html { redirect_to workers_url, notice: 'Worker was successfully destroyed.' }
+        format.json { head :no_content }
+      end
   end
 
   private
