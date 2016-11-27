@@ -1,31 +1,20 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Appointments</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Date</th>
-      <th>Time</th>
-      <th>Dock</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div id="appointments">
+  <h2 id="month">
+    <%= link_to "<", date: @date.prev_month %>
+    <%= @date.strftime("%B %Y") %>
+    <%= link_to ">", date: @date.next_month %></h2>
+  <%= calendar @date do |date| %>
+      <%= date.day %>
+      <% if @appointments_by_date[date] %>
+        <ul>
+          <% @appointments_by_date[date].each do |appointment| %>
+            <li><%= link_to "#{appointment.dock.name}" + " " "#{appointment.time}", appointment %></li>
+            <% end %>
+        </ul>
+              <% end %>
+  <% end %>
+</div>
 
-  <tbody>
-    <% @appointments.each do |appointment| %>
-      <tr>
-        <td><%= appointment.date %></td>
-        <td><%= appointment.time %></td>
-        <td><%= appointment.dock_id %></td>
-        <td><%= link_to 'Show', appointment %></td>
-        <td><%= link_to 'Edit', edit_appointment_path(appointment) %></td>
-        <td><%= link_to 'Destroy', appointment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Appointment', new_appointment_path %>
+<p><%= link_to 'New Appointment', new_appointment_path %></p>

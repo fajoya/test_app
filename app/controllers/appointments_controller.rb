@@ -5,11 +5,17 @@ class AppointmentsController < ApplicationController
   # GET /appointments.json
   def index
     @appointments = Appointment.all
+    @appointments_by_date = @appointments.group_by(&:date)
+    @date = params[:date] ? Date.parse(params[:date]) : Date.today
   end
 
   # GET /appointments/1
   # GET /appointments/1.json
   def show
+  end
+
+  def calendar
+
   end
 
   # GET /appointments/new
