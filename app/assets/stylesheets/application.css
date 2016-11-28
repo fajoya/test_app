@@ -14,3 +14,14 @@
  *= require_tree .
  *= require_self
  */
+.header {
+    padding: 20px;
+    background-color: lightgreen;
+    color: ghostwhite;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+.header h1 {
+    color: black;
+}

@@ -9,6 +9,17 @@
   </head>
 
   <body>
+  <div class="header" id="header">
+    <h1>Dock Management System</h1>
+    <%= link_to "Home", pages_home_path %>
+    <%= link_to "Appointments", appointments_path %>
+    <%= link_to "Docks", docks_path %>
+    <%= link_to "Workers", workers_path %>
+    <br>
+  </div>
+  <br>
+  <hr align="center" noshade >
+  <br>
     <%= yield %>
   </body>
 </html>

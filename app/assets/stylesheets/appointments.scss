@@ -7,13 +7,13 @@
 
   td, th {
     font-family: "Lucida Grande", arial, helvetica, sans-serif;
-    font-size: 10px;
+    font-size: 15px;
     padding: 6px;
     border: 1px solid #999;
   }
 
   th {
-    background: #DDD;
+    background: lightgreen;
     color: #666;
     text-align: center;
     width: 14%;
@@ -28,7 +28,7 @@
   }
 
   .notmonth { color: #CCC;}
-  .today { background-color: #D7F2FF;}
+  .today { background-color: lightgreen;}
 }
 
 #appointments #month {
@@ -43,7 +43,16 @@
   }
 }
 
-#articles ul {
+#appointments #links {
+  list-style-type:none;
+  margin: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: left;
+}
+
+#appointments ul {
   font-size: 11px;
-  padding-left: 20px;
+  padding-left: 0px;
+  text-align: left;
 }
